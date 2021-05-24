@@ -9,7 +9,7 @@
         <title>DNK Writes</title>
 <!--        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />-->
         {% load static %}
-        <link rel="icon" type="image/x-icon" href="{% static 'portfolio/new/assets/favicon.ico' %}">
+        <link rel="icon" type="image/x-icon" href="{% static 'portfolio/new/assets/dnkwrites-logo.ico' %}">
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -23,7 +23,7 @@
     <body>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">PLACEHODLER</span>
+                <span class="site-heading-upper text-primary mb-3">PLACEHOLDER</span>
                 <span class="site-heading-lower">DNK WRITES</span>
             </h1>
         </header>
@@ -34,15 +34,28 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        "{% url 'index' %}"
+
 <!--                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'index' %}">Home</a></li>-->
 <!--                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'about' %}">About</a></li>-->
 <!--                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'products' %}">Products</a></li>-->
 <!--                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'shop' %}">Shop</a></li>-->
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#!">Home</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#!">About</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#!">Products</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#!">Shop</a></li>
+<!--                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#!">Home</a></li>-->
+<!--                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#!">About</a></li>-->
+<!--                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#!">Products</a></li>-->
+<!--                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#!">Shop</a></li>-->
+                        <li class="nav-item px-lg-4 nav-link text-uppercase"><a class="{% if classhome %}{{classhome}}{% else %}main-nav{% endif %}" href="{% url 'index' %}">Home</a></li>
+                        <li class = "nav-item px-lg-4 nav-link text-uppercase"><a class="{% if classabout %}{{classabout}}{% else %}main-nav{% endif %}" href="{% url 'about' %}">About</a></li>
+                        <li class = "nav-item px-lg-4 nav-link text-uppercase"><a class="{% if classproducts %}{{classproducts}}{% else %}main-nav{% endif %}" href="{% url 'products' %}">Products</a></li>
+                        <li class = "nav-item px-lg-4 nav-link text-uppercase"><a class="{% if classshop %}{{classshop}}{% else %}main-nav{% endif %}" href="{% url 'shop' %}">Shop</a></li>
+<!--                        <li id="home-nav" class="{% if classhome %}{{classhome}}{% else %}main-nav{% endif %}"><a href="{% url 'index' %}">Home</a></li>-->
+<!--                        <li class="{% if classabout %}{{classabout}}{% else %}main-nav{% endif %}" id="github-nav"><a href="{% url 'about' %}">About</a></li>-->
+
+<!--                        <li class="{% if classproducts %}{{classproducts}}{% else %}main-nav{% endif %}" id="project-nav"><a href="{% url 'products' %}">Products</a></li>-->
+
+<!--                        <li class="{% if classshop %}{{classshop}}{% else %}main-nav{% endif %}" id="resume-nav"><a href="#!">Shop</a></li>-->
+
+
+
                     </ul>
                 </div>
             </div>
@@ -51,7 +64,7 @@
             <div class="container">
                 <div class="intro">
                     {% load static %}
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{%static 'portfolio/new/assets/img/intro.jpg' %}" alt="..." />
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'portfolio/new/assets/img/blackart.jpg' %}" alt="..." />
 
                     <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                         <h2 class="section-heading mb-4">
@@ -80,7 +93,7 @@
             </div>
         </section>
         <footer class="footer text-faded text-center py-5">
-            <div class="container"><p class="m-0 small">PlACEHODLER &copy; 2021</p></div>
+            <div class="container"><p class="m-0 small">Copyright &copy; DNK WRITES 2021</p></div>
         </footer>
 
         <!-- Bootstrap core JS-->

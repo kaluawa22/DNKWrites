@@ -7,14 +7,14 @@ def index(request):
     return render(request, 'portfolio/new/index.html',context)
 
 def about(request):
-    context = {'classhome': "nav-current"}
+    context = {'classabout': "nav-current"}
     return render(request, 'portfolio/new/about.html',context)
 
 def products(request):
-    context = {'classhome': "nav-current"}
+    context = {'classproducts': "nav-current"}
     return render(request, 'portfolio/new/products.html',context)
 
 def shop(request):
-    context = {'classhome': "nav-current"}
+    context = {'classshop': "nav-current"}
     return render(request, 'portfolio/new/shop.html',context)
 
